@@ -1,6 +1,6 @@
 name: MrRSS
 package: cloud.lazycat.app.mrrss
-version: 1.3.8
+version: 1.3.12
 min_os_version: 1.3.8
 description: "A modern, cross-platform, and free AI RSS reader."
 license: MIT
@@ -16,7 +16,8 @@ application:
 
 services:
   mrrss-server:
-    image: registry.lazycat.cloud/czyt/caoli5288/mrrss:85beca4ac0290686
+    # ghcr.io/dockers-x/mrrss:1.3.12
+    image: registry.lazycat.cloud/czyt/dockers-x/mrrss:fded121b1ede84a5
     user: mrrss
     environment:
       - MRRSS_DEBUG=false
