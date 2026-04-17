@@ -1,12 +1,3 @@
-name: MrRSS
-package: cloud.lazycat.app.mrrss
-version: 1.3.18
-min_os_version: 1.3.8
-description: "A modern, cross-platform, and free AI RSS reader."
-license: MIT
-homepage: https://github.com/WCY-dt/MrRSS
-author: WCY-dt
-
 application:
   subdomain: mrrss
   multi_instance: true
@@ -16,8 +7,8 @@ application:
 
 services:
   mrrss-server:
-    # ghcr.io/wcy-dt/mrrss:1.3.18
-    image: registry.lazycat.cloud/czyt/wcy-dt/mrrss:fa4e66fa65b6a4ad
+    # ghcr.io/wcy-dt/mrrss:1.3.23
+    image: registry.lazycat.cloud/czyt/wcy-dt/mrrss:7be77cd769990df1
     user: mrrss
     environment:
       - MRRSS_DEBUG=false
@@ -34,11 +25,3 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-
-locales:
-  en:
-    name: "MrRSS"
-    description: "A modern, cross-platform, and free AI RSS reader. Supports multiple RSS source management, intelligent classification, and optimized reading experience."
-  zh:
-    name: "MrRSS"
-    description: "一个现代化、跨平台且免费的 AI RSS 阅读器。支持多种 RSS 源管理，智能分类和阅读体验优化。"

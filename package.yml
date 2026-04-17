@@ -1,0 +1,17 @@
+---
+name: MrRSS
+package: cloud.lazycat.app.mrrss
+version: 1.3.23
+min_os_version: 1.5.0
+description: "A modern, cross-platform, and free AI RSS reader."
+license: MIT
+homepage: https://github.com/WCY-dt/MrRSS
+author: WCY-dt
+
+locales:
+  en:
+    name: "MrRSS"
+    description: "A modern, cross-platform, and free AI RSS reader. Supports multiple RSS source management, intelligent classification, and optimized reading experience."
+  zh:
+    name: "MrRSS"
+    description: "一个现代化、跨平台且免费的 AI RSS 阅读器。支持多种 RSS 源管理，智能分类和阅读体验优化。"
