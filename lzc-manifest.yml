@@ -4,10 +4,10 @@ application:
   upstreams:
     - location: /
       backend: http://mrrss-server:1234/
-
 services:
   mrrss-server:
     # ghcr.io/wcy-dt/mrrss:1.3.23
+    # upstream: ghcr.io/wcy-dt/mrrss:1.3.23
     image: registry.lazycat.cloud/czyt/wcy-dt/mrrss:7be77cd769990df1
     user: mrrss
     environment:
