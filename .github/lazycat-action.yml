@@ -1,0 +1,32 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/mrrss.lpk
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: mrrss
+build:
+  run_buildscript: false
+images:
+  - id: mrrss
+    target: service
+    service: mrrss-server
+    source: ghcr.io/wcy-dt/mrrss
+    channel: stable
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: lazycat
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: MrRSS
+    summary: 现代化、跨平台的 AI RSS 阅读器
